@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hersa-rentadecarpas.github.io/sitemap.xml
