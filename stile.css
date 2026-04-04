@@ -1,0 +1,454 @@
+/* Paleta: Negro #111, Blanco #fff, Dorado/Amarillo #FFD600 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* WhatsApp Flotante */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
+
+/* Header & Nav */
+header {
+    background: #000;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo-img {
+    height: 70px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #FFD600;
+}
+
+/* Hero & Carrusel */
+.hero {
+    height: 80vh;
+    position: relative;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.swiper-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    width: 90%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    background: #FFD600;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+/* Secciones */
+.section { padding: 60px 20px; text-align: center; }
+.container { max-width: 1200px; margin: auto; }
+
+h2 {
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    width: 60%;
+    height: 4px;
+    background: #FFD600;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+
+/* Giros */
+.grid-giros { display: grid; gap: 20px; margin-top: 20px; }
+.giros-2 { grid-template-columns: 1fr 1fr; max-width: 800px; margin: auto; }
+.card-giro {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Soluciones Grid 6 */
+.soluciones-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card-solucion {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-top: 6px solid #FFD600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.card-solucion:hover { transform: translateY(-10px); }
+
+.card-header { font-size: 1.5rem; font-weight: bold; color: #111; margin-bottom: 10px; }
+
+.divider {
+    width: 40px;
+    height: 3px;
+    background: #FFD600;
+    margin: 10px auto 20px;
+}
+
+.card-solucion ul { list-style: none; text-align: left; margin-bottom: 25px; }
+.card-solucion ul li { margin-bottom: 10px; font-size: 0.95rem; }
+.card-solucion ul li::before { content: '✔ '; color: #FFD600; font-weight: bold; }
+
+.btn-card {
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    text-align: center;
+}
+.btn-card:hover { background: #FFD600; color: #000; }
+
+.beneficios-estandar {
+    background: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.destacado-capacidad { color: #d4af37; font-weight: bold; }
+
+/* Cobertura */
+.section-dark { background: #1a1a1a; color: #fff; padding: 60px 20px; text-align: center; }
+.map-img-link {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #FFD600;
+    transition: 0.3s;
+}
+.map-img-link:hover { opacity: 0.8; transform: scale(1.02); }
+
+/* Galería (4 columnas x 3 filas = 12 imgs) */
+.gallery-grid { 
+    display: grid; 
+    gap: 10px; 
+    grid-template-columns: repeat(4, 1fr); 
+}
+
+.gallery-img {
+    width: 100%;
+    height: 200px; /* O la altura que prefieras */
+    object-fit: cover; /* Mantiene la proporción sin estirarse */
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+
+.gallery-link {
+    text-decoration: none; /* Quita el subrayado */
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-link h2 {
+    color: #333; /* Color original del título */
+    cursor: pointer;
+}
+
+.gallery-link:hover {
+    transform: scale(1.05); /* Pequeño efecto de aumento al pasar el mouse */
+}
+
+.gallery-link:hover h2 {
+    color: #FFD600; /* Cambia a dorado al pasar el mouse */
+}
+
+.gallery-link h2 i {
+    font-size: 1.5rem; /* Tamaño del icono de Instagram junto al título */
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+
+/* Sección Clientes */
+.section-black {
+    background: #111;
+    padding: 60px 20px;
+    text-align: center;
+}
+.title-yellow { color: #FFD600; font-size: 2rem; margin-bottom: 40px; letter-spacing: 1px; }
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.client-item {
+    background: #1a1a1a;
+    padding: 30px 10px;
+    border-radius: 8px;
+    border-bottom: 3px solid #D32F2F; 
+    color: #fff;
+}
+.icon-yellow { color: #FFD600; font-size: 2.5rem; margin-bottom: 15px; }
+.client-item p { font-weight: bold; font-size: 0.9rem; }
+
+
+/* *** ESTILOS NUEVA SECCIÓN CONTACTO *** */
+.section-dark-kontakt {
+    background: #1a1a1a; /* Fondo oscuro, combina con Hersa */
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.kontakt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas: Hersa, Datos, Redes */
+    gap: 30px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+.kontakt-item {
+    padding: 20px;
+}
+
+.email-link {
+    color: inherit; /* Mantiene el color blanco o gris que ya tenías */
+    text-decoration: none; /* Quita el subrayado */
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #ffcc00; /* Se pone amarillo (o tu color de acento) al pasar el mouse */
+    text-decoration: underline; /* Opcional: que se subraye solo al pasar el mouse */
+}
+
+
+.email-link, .phone-link {
+    color: inherit; /* Hereda el color del texto del contenedor */
+    text-decoration: none; /* Quita el subrayado por defecto */
+    transition: color 0.3s ease;
+}
+
+.email-link:hover, .phone-link:hover {
+    color: #ffcc00; /* Color amarillo al pasar el mouse */
+    text-decoration: underline; /* Aparece subrayado solo al interactuar */
+}
+
+
+.hersa-title {
+    color: #FFD600; /* Título HERSA dorado */
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.slogan-note {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+.kontakt-itemkontakt h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+margin-top: 0;
+}
+
+.kontakt-data p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    text-align: left; /* Datos alineados a la izquierda para mejor lectura */
+line-height: 1.2;    
+max-width: 300px;
+display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.icon-yellow {
+    color: #FFD600; /* Iconos dorados */
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.social-kontakt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+margin-top: 5px;
+}
+
+.social-kontakt a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    transition: 0.3s;
+margin-top: 5px;
+}
+
+.social-kontakt a:hover {
+    color: #FFD600;
+}
+
+.yellow-icon {
+    color: #FFD600;
+    font-size: 1.3rem;
+}
+
+/* Responsivo para Contacto */
+@media (max-width: 768px) {
+    .kontakt-grid {
+        grid-template-columns: 1fr; /* Columna única en móviles */
+    }
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #eee;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+.footer-content p { 
+margin-bottom: 5px;
+ font-size: 0.85rem;
+line-height: 1.2;
+ }
+
+.designer {
+ opacity: 0.6;
+ margin-top: 15px;
+ font-size: 0.8rem;
+ }
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .soluciones-grid-6 { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .clients-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .nav-links { display: none; }
+    .soluciones-grid-6, .giros-2 { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2rem; }
+    .clients-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+}
